@@ -1,0 +1,7 @@
+aws ec2 describe-vpn-connections \
+  --query 'VpnConnections[*].{
+    VPN_ID: VpnConnectionId,
+    Name: Tags[?Key==`Name`]|[0].Value,
+    Tunnel1Status: VgwTelemetry[0].Status
+  }' \
+  --output table

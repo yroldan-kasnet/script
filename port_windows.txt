@@ -1,0 +1,10 @@
+# Crear el objeto TcpListener en el puerto XXX
+$listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, 9900)
+
+# Iniciar el listener
+$listener.Start()
+Write-Host "Escuchando en el puerto 9900"
+
+# Esperar a que un cliente se conecte
+$client = $listener.AcceptTcpClient()
+Write-Host "Cliente conectado desde" $client.Client.RemoteEndPoint
