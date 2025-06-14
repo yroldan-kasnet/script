@@ -1,3 +1,4 @@
+#El sigueinte script permite abrir un puerto en sistemas operativos Windows.
 aws ec2 describe-vpn-connections \
   --query 'VpnConnections[*].{
     VPN_ID: VpnConnectionId,
