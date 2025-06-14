@@ -1,4 +1,4 @@
-#El sigueinte script permite abrir un puerto en sistemas operativos Windows.
+#El sigueinte script permite ejecutar en la consola de AWS y extraer lista de VPN S2S creadas.
 aws ec2 describe-vpn-connections \
   --query 'VpnConnections[*].{
     VPN_ID: VpnConnectionId,
